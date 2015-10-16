@@ -17,7 +17,7 @@ I'm going to assume you know about controlling the flow of code with an if-state
 Let's go through these one by one.
 
 ## `&&` (Logical AND)
-This operator takes too expressions as arguments.  An [_expression_](https://en.wikipedia.org/wiki/Expression_(mathematics)) is just a fancy<br>way of saying a mathematical statement.  (e.g. `5 + 2 * 3` is an expression as<br>is `true` as is `5 / 2`, as is `3` by itself).
+This operator takes too expressions as arguments.  An [_expression_](https://en.wikipedia.org/wiki/Expression_(mathematics)) is just a fancy way of saying a mathematical statement.  (e.g. `5 + 2 * 3` is an expression as<br>is `true` as is `5 / 2`, as is `3` by itself).
 
 For now let's think entirely in booleans (true and false).
 
@@ -47,6 +47,9 @@ In a sense, the `!` operator is just returning the opposite of the expression.
 !false
 => true
 ```
+
+## `||` (Logical OR)
+
 
 Try to predict the result of the following expressions and then test them out in [repl.it](https://repl.it/languages/javascript) to make sure your prediction was correct.
 
