@@ -34,22 +34,6 @@ You can see now how the && operator works:<br>_expr1_ `&&` _expr2_
 
 If expression 1 evaluates to true and expression 2 evaluates to true, then our && operator will return true as well!  In fact, this is the only way to get it to return true.  If either of the expressions on either side of the && operator evaluate to false, then the && operator returns false.
 
-## `!` (Logical NOT)
-What if we wanted to test to make sure that two expressions are not true, but rather they are both false?  Well, we have to convert `false` values to `true`.  We do this with the `!` operator, formally known as the _logical NOT operator_.  Just as 'not true' is false, 'not false' is true.  So, think about the following expression for a second:
-
-`!false` ... What would that evaluate to?<br>What about `!false && !false`?
-
-In a sense, the `!` operator is just returning the opposite of the expression.
-
-```
-!true
-=> false
-!false
-=> true
-```
-
-## `||` (Logical OR)
-
 
 Try to predict the result of the following expressions and then test them out in [repl.it](https://repl.it/languages/javascript) to make sure your prediction was correct.
 
@@ -68,6 +52,43 @@ false && false
 true && true && !true
 ```
 
+## `!` (Logical NOT)
+What if we wanted to test to make sure that two expressions are not true, but rather they are both false?  Well, we have to convert `false` values to `true`.  We do this with the `!` operator, formally known as the _logical NOT operator_.  Just as 'not true' is false, 'not false' is true.  So, think about the following expression for a second:
+
+`!false` ... What would that evaluate to?<br>What about `!false && !false`?
+
+In a sense, the `!` operator is just returning the opposite of the expression.
+
+```
+!true
+=> false
+!false
+=> true
+```
+
+## `||` (Logical OR)
+As the name suggests, the logical OR operator will return true so long as one of the expressions on its right or left side results in a truthy value.
+
+```javascript
+true || false;
+=> true
+false || true;
+=> true
+false || !false;
+=> true;
+```
+
+Figure out what the result of the following script would be and then test it out in repl.it.
+
+```javascript
+var num = 3;
+var isNumOdd = (num % 2 !== 0);
+var isNumBig = (num > 5);
+
+var result = isNumOdd || isNumBig;
+
+console.log("The result is " + result + "!");
+```
 
 
 ## Comparison Operators
