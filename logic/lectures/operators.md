@@ -1,4 +1,5 @@
-# JavaScript Operators :heavy_minus_sign: :heavy_division_sign: **== != === !==**
+# JavaScript Operators
+#### :heavy_minus_sign: :heavy_division_sign: **== != === !==**<br>
 **Assigned Reading:** [Logical Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators), [Comparison Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity)
 
 I decided to cover this because logic is used so frequently to control the flow of code execution and test for conditions.  You may have noticed this if you've looked through our React code: we are frequently using logic to test things like whether or not we should render a particular component.
@@ -11,7 +12,7 @@ if (this.state.bookmarksMode === "DISCOVER" && this.state.selectedRoomItem) {
 }
 ```
 
-I'm going to assume you know about controlling the flow of code with an 'if' statement.  If not, review that [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).  In our code, if-statements are most likely the place you will see the higest occurance of logical operators (`&&`, `||`, `!` ).
+I'm going to assume you know about controlling the flow of code with an if-statement.  If not, review that [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).  In our code, if-statements are most likely the place you will see logical operators (`&&`, `||`, `!` ).
 
 Let's go through these one by one.
 
@@ -33,6 +34,7 @@ You can see now how the && operator works:<br>_expr1_ `&&` _expr2_
 
 If expression 1 evaluates to true and expression 2 evaluates to true, then our && operator will return true as well!  In fact, this is the only way to get it to return true.  If either of the expressions on either side of the && operator evaluate to false, then the && operator returns false.
 
+## `!` (Logical NOT)
 What if we wanted to test to make sure that two expressions are not true, but rather they are both false?  Well, we have to convert `false` values to `true`.  We do this with the `!` operator, formally known as the _logical NOT operator_.  Just as 'not true' is false, 'not false' is true.  So, think about the following expression for a second:
 
 `!false` ... What would that evaluate to?<br>What about `!false && !false`?
@@ -62,6 +64,8 @@ false && false
 // Example 6
 true && true && !true
 ```
+
+
 
 ## Comparison Operators
 I'm not going to get too deep into the relational operators.  You should recognize most of these from basic algebra.  I just want to briefly mention them since I used them in the above examples.
