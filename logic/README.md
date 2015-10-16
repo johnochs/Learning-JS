@@ -17,5 +17,6 @@
 
 ## Operator Precedence
 > _"How wonderful that we have met with a paradox. Now we have some hope of making progress."_ -Neils Bohr
-  - [Lecture](https://github.com/johnochs/Learning-JS/tree/master/logic/lectures/operator-precedence.md)
-  - [Exercises](https://github.com/johnochs/Learning-JS/tree/master/logic/exercises/operator-precedence.js)
+
+- [Lecture](https://github.com/johnochs/Learning-JS/tree/master/logic/lectures/operator-precedence.md)
+- [Exercises](https://github.com/johnochs/Learning-JS/tree/master/logic/exercises/operator-precedence.js)
