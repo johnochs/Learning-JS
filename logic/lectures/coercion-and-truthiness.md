@@ -7,7 +7,7 @@ Hence the weirdness of `false == [];` => `true`.
 You can read a bit more about coercion [here](http://webreflection.blogspot.com/2010/10/javascript-coercion-demystified.html), but don't jump on the bandwagon and start making a big deal about how stupid JS is.  Coercion is the process of making one type of data become another type (e.g. making an `object` a `string` or a `string` a `number`.  Coercion does have some non-intuitive results and behaviors, but if you were a true nerd and actually read the ECMAScript Spec, you would find that this behavior is not only known about but is specifically delineated.  Be a good programmer: know of the idiosyncrasies, avoid the common pitfalls, educate others, and don't bitch.
 
 ## Truth'y' and Fals(e)?'y' Values
-![Truthiness](http://gph.is/19PSMzR)<br>"Truthy" and "falsy" sound like pretty abstract concepts, but soon enough you'll be right at home with them.  The best way to think about them is to imagine what happens in the expression of an if-statement:
+"Truthy" and "falsy" sound like pretty abstract concepts, but soon enough you'll be right at home with them.  The best way to think about them is to imagine what happens in the expression of an if-statement:
 
 ```javascript
 if (/*expression*/) {
@@ -15,7 +15,7 @@ if (/*expression*/) {
 }
 ```
 
-Truthiness depends entirely on the language you're writing in.  In some languages, the only value which will cause "The expression is SO truthy" to appear in the standard out stream would the value which is pointed to in memory for the one and only singular "true" value.  In many languages, particularly [dynamic](https://en.wikipedia.org/wiki/Dynamic_programming_language) languages like JavaScript, there are many expressions which will happily result in a value which will cause "The expression is SO truthy" to spew forth as the compiler flashes the above if-statement.  In fact, in JavaScript, the number of values which will trigger this result is infinite.  However, there are a finite number of expression results which will prevent this from happening -- six (`6`) results to be exact.  These results are as follows:
+Truthiness depends entirely on the language you're writing in.  In some languages, the only value which will cause "The expression is SO truthy" to appear in the standard out stream would be the value which is pointed to in memory for the one and only singular "true" value.  In many languages, particularly [dynamic](https://en.wikipedia.org/wiki/Dynamic_programming_language) languages like JavaScript, there are many expressions which will happily result in a value which will cause "The expression is SO truthy" to spew forth as the compiler flashes the above if-statement.  In fact, in JavaScript, the number of values which will trigger this result is infinite.  However, there are a finite number of expression results which will prevent this from happening -- six (`6`) results to be exact.  These results are as follows:
 - `false`
 - `undefined`
 - `""`
@@ -23,7 +23,7 @@ Truthiness depends entirely on the language you're writing in.  In some language
 - `null`
 - `NaN`
 
-Hopefully you are reasonably familiar with some of these values if you've done anything with JS before.  And if you've read other people's code, you may have seen some people "hacking" this weird behavior to their benefit.  A very common use of this behavior the following example:
+Hopefully you are reasonably familiar with some of the above values if you've done anything with JS before.  And if you've read other people's code, you may have seen some people "hacking" this weird behavior to their benefit.  A very common use of this behavior the following example:
 
 Assume that the variable `userNames` is empty (i.e. `userNames = []`).
 
