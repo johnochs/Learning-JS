@@ -73,7 +73,8 @@ Again, if you're a rubyist, the easiest way to think about this is as follows:
 
 If you're not a Rubyist... well... go learn Ruby or something.
 
-Don't worry about that last bit just yet. We'll get to that later.
+Don't worry about the last bit concerning package.json just yet. We'll get to 
+that later.
 
 ## Additional Reading
 * [Wikipedia's *surprisingly* short article on Node](https://en.wikipedia.org/wiki/Node.js)
