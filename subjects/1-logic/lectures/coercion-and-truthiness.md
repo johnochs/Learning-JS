@@ -1,8 +1,23 @@
 # Coercion, Truth, and Being Lied to
 ## Coercion
-If the last exercise is making you uncomfortable and you haven't figured out quite was is going on with all this weirdness, not to worry.  Unless you are intending to become a JavaScript scholar, there's really no reason to commit to memory the arcane rules surrounding JavaScript's coercion fetishes.  However, from this day forth, there is one thing that you need to remember: _there is almost no reason to ever use the `==` operator_.  Do yourself a favor and just get that tattooed somewhere.  The reason why this is the case is because JavaScript does a funny thing called _coercion_ (yeah, I mentioned that word before while pretending you actually knew what it meant... :trollface:).  If you're using the `==` operator, just know that you're giving JavaScript much more leeway to do what it pleases. If you execute the expression `x == y` in JavaScript, but `x` and `y` are not the same type (e.g. perhaps one is a number `42` and the other is string `"I am a baNAna"`), JS is going to try (mainly through the all-seeing eye API of [Theresa Caputo](https://en.wikipedia.org/wiki/Long_Island_Medium)) to convert the results of the expressions on either side of the equality operator into the same type before comparing them.  Needless to say, its methods for doing so are not intuitive.  For example, when JS tries to convert the string "" into a number, it converts it to 0.  A similar thing happens when trying to convert an empty array (`[]`) into a string.  Less strangely (but still very surprising), when something that is **NOT** a boolean type is compared with something that **IS** a boolean type, both arguments are converted to numbers.  "Truthy" values result in a `1`, but "falsy" values result in a `0`.
+If the last exercise is making you uncomfortable and you haven't figured out quite was is going on with all this weirdness, not to worry.  Unless you are intending to become a JavaScript scholar, there's really no reason to commit to memory the arcane rules surrounding JavaScript's coercion fetishes.  However, from this day forth, there is one thing that you need to remember: _there is almost no reason to ever use the `==` operator_.  Do yourself a favor and just get that tattooed somewhere.  The reason why this is the case is because JavaScript does a funny thing called _coercion_ (yeah, I mentioned that word before while pretending you actually knew what it meant... :trollface:).  If you're using the `==` operator, just know that you're giving JavaScript much more leeway to do what it pleases. If you execute the expression `x == y` in JavaScript, but `x` and `y` are not the same type (e.g. perhaps one is a number `42` and the other is string `"I am a baNAna"`), JS is going to try (mainly through the all-seeing-eye API of [Theresa Caputo](https://en.wikipedia.org/wiki/Long_Island_Medium)) to convert the results of the expressions on either side of the equality operator into the same type before comparing them.  Needless to say, its methods for doing so are not intuitive.  For example, when JS tries to convert the string "" into a number, it converts it to 0.  A similar thing happens when trying to convert an empty array (`[]`) into a number.  Less strangely (but still very surprising), when something that is **NOT** a boolean type is compared with something that **IS** a boolean type, both arguments are converted to numbers.  "Truthy" values result in a `1`, but "falsy" values result in a `0`.
 
-Hence the weirdness of `false == [];` => `true`.
+```javascript
+false == "false";
+// becomes...
+0 == 1;
+=> false
+```
+
+Also consider the weirdness of
+```javascript
+false == [];
+// Which after coercion becomes:
+0 == 0;
+=> true.
+```
+
+![wat1](http://i.giphy.com/GFLcKd6MXid2M.gif) ![wat2](http://i.giphy.com/X8lpsy3YBcIJW.gif) ![wat3](http://i.giphy.com/elnOfetKsGDHa.gif)
 
 You can read a bit more about coercion [here](http://webreflection.blogspot.com/2010/10/javascript-coercion-demystified.html), but don't jump on the bandwagon and start making a big deal about how stupid JS is.  Coercion is the process of making one type of data become another type (e.g. making an `object` a `string` or a `string` a `number`.  Coercion does have some non-intuitive results and behaviors, but if you were a true nerd and actually read the ECMAScript Spec, you would find that this behavior is not only known about but is specifically delineated.  Be a good programmer: know of the idiosyncrasies, avoid the common pitfalls, educate others, and don't bitch.
 
